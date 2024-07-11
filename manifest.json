@@ -5,11 +5,11 @@
     "@janzagata"
   ],
   "config_flow": true,
-  "dependencies": [],
+  "dependencies": [
+    "bluetooth_adapters"
+  ],
   "documentation": "https://www.home-assistant.io/integrations/paulmann",
   "homekit": {},
   "iot_class": "local_polling",
-  "requirements": [],
-  "ssdp": [],
-  "zeroconf": []
+  "version": "0.0.1"
 }

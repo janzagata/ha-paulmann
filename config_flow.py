@@ -30,9 +30,6 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
     async def async_step_bluetooth(self, discovery_info: BluetoothServiceInfoBleak) -> FlowResult:
         """Handle the bluetooth discovery step."""
-        #if discovery_info.name.startswith(UNSUPPORTED_SUB_MODEL):
-        #    return self.async_abort(reason="not_supported")
-
         await self.async_set_unique_id(discovery_info.address)
         self._abort_if_unique_id_configured()
         self._discovery_info = discovery_info

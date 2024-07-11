@@ -43,8 +43,7 @@ class Paulmann:
                     _LOGGER.debug("Error on connect", exc_info=True)
                     raise asyncio.TimeoutError("Error on connect") from exc
             else:
-                print("Client connected: %s" % self._client.is_connected)
-            _LOGGER.debug("Connection reused")
+                _LOGGER.debug("Connection reused")
 
     async def _authenticate (self):
         """ authenticate with the device, does not alter state of self """

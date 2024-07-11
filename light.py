@@ -11,7 +11,6 @@ from homeassistant.components.light import (LightEntity, ColorMode)
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
-from homeassistant.helpers.typing import ConfigType, DiscoveryInfoType
 from .paulmann.models import State
 
 _LOGGER = logging.getLogger(__name__)

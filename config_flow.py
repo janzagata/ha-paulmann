@@ -6,7 +6,7 @@ from typing import Any
 
 from bluetooth_data_tools import human_readable_name
 import voluptuous as vol
-from paulmann import PaulmannAuthenticationError
+from .paulmann.exceptions import PaulmannAuthenticationError
 
 from homeassistant import config_entries
 from homeassistant.components.bluetooth import BluetoothServiceInfoBleak, async_discovered_service_info

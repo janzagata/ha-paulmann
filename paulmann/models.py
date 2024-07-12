@@ -1,7 +1,7 @@
 """Asynchronous Python client for Paulmann Key Lights."""
 
 import attr
-from paulmann.const import (
+from .const import (
     UUID_SYSTEM_TIME,
     UUID_PWD,
     UUID_ONOFF,

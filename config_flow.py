@@ -18,7 +18,7 @@ from .paulmann.connector import Paulmann
 
 _LOGGER = logging.getLogger(__name__)
 
-class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
+class PaulmannFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle a config flow for Generic BT."""
 
     VERSION = 1

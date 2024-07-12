@@ -11,5 +11,6 @@
   "documentation": "https://www.home-assistant.io/integrations/paulmann",
   "homekit": {},
   "iot_class": "local_polling",
+  "integration_type": "device",
   "version": "0.0.1"
 }

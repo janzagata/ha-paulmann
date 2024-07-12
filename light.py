@@ -6,13 +6,10 @@ from typing import Any
 
 from .paulmann.connector import Paulmann
 
-# Import the device class from the component that you want to support
 from homeassistant.components.light import (LightEntity, ColorMode)
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
-from .paulmann.models import State
-
 _LOGGER = logging.getLogger(__name__)
 
 async def async_setup_entry(
@@ -74,4 +71,4 @@ class PaulmannLight(Paulmann, LightEntity):
 
         This is the only method that should fetch new data for Home Assistant.
         """
-        self._state = State.from_dict(await self.get_state())
+        self._state = await self.get_state()

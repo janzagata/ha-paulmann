@@ -1,2 +1,2 @@
 # ha-paulmann
-Paulmann BLE lights integration for Home Assistant
+Paulmann BLE integration for Home Assistant

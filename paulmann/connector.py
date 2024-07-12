@@ -7,8 +7,8 @@ from bleak import BleakClient
 from bleak.backends.device import BLEDevice
 from bleak.exc import BleakError
 
-from .exceptions import PaulmannConnectionError, PaulmannAuthenticationError,PaulmannError
-from .models import Info, State
+from .exceptions import PaulmannAuthenticationError
+from .models import State
 from .const import *
 
 _LOGGER = logging.getLogger(__name__)
@@ -105,4 +105,4 @@ class Paulmann:
             UUID_CONTROLLER_ENABLE: bool(await self._client.read_gatt_char(UUID_CONTROLLER_ENABLE)),
         }
 
-        return data
+        return State.from_dict(data)
